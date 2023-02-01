@@ -10,6 +10,6 @@ class Type extends Model
     use HasFactory;
 
     public function projects() {
-        return $this->hasOne(Project::class);
+        return $this->hasMany(Project::class);
     }
 }

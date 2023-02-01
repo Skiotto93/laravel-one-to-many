@@ -25,6 +25,13 @@
                 <label for="cover_image" class="form-label">Immagine:</label>
                 <input type="file" class="form-control" id="cover_image" name="cover_image" value="{{ old('cover_image') }}">
             </div>
+            {{-- <div class="mb-3">
+                <label for="type" class="form-label">Tipo di Progetto:</label>
+                <select name="type_id" id="type">
+                    <option value="">No Type</option>
+                    
+                </select>
+            </div> --}}
             <div class="text-center mt-4">
                 <button type="submit" class="btn btn-primary">Crea</button>
             </div>

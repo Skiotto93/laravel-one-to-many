@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('types', function (Blueprint $table) {
             $table->id();
             $table->string('complexity', 100);
-            $table->string('sources_of_capital', 50);
-            $table->string('content', 100);
-            $table->string('human_resources', 50);
+            $table->string('sources_of_capital', 50)->nullable();
+            $table->string('content', 100)->nullable();
+            $table->string('human_resources', 50)->nullable();
             $table->string('slug');
             $table->timestamps();
         });

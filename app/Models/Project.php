@@ -11,7 +11,7 @@ class Project extends Model
 
     protected $guarded = ['slug'];
 
-    public function project() {
+    public function type() {
         return $this->belongsTo(Type::class);
     }
 }

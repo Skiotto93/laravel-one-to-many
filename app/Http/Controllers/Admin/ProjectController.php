@@ -45,7 +45,7 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $data = $request->validated();
-
+        // dd($data);
         $img_path = Storage::disk('public')->put('uploads', $data['cover_image']);
 
         $new_project = new Project;

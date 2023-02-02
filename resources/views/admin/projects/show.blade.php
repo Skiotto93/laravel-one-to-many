@@ -21,7 +21,11 @@
             @endif
         </div>
         <div class="mb-3">
-            <strong>Livello complessità: {{$project->types_id?->complexity ? $project->types_id->complexity : 'Questo progetto non ha un livello di complessità'}}</strong>
+            @if ($project->types_id)
+            <strong>Livello complessità: {{$project->types_id}}</strong>
+            @else
+            <p>Nessuna complessità selezionata</p>
+            @endif
         </div>
         <div class="d-flex justify-content-center">
             <a href="{{ route('admin.projects.index') }}" class="btn btn-primary">Torna alla Dashboard</a>
